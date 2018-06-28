@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <!-- Definition for MainWorker bean -->
+   <bean id = "main-worker-ci" class = "com.tarun.spring.di.bean.MainWorker_CI" autowire = "constructor"></bean>
+   
+   <bean id = "main-worker-si" class = "com.tarun.spring.di.bean.MainWorker_SI" autowire="byType"></bean>
+
+   <!-- Definition for WorkerType beans -->
+   <bean id = "workerOne" class = "com.tarun.spring.di.bean.WorkerType1">
+		<property name = "workTypeOne" value = "Completed work type 1!"/>
+   </bean>
+   <bean id = "workerTwo" class = "com.tarun.spring.di.bean.WorkerType2">
+   		<property name = "workTypeTwo" value = "Completed work type 2!"/>
+   </bean>
+
+</beans>
